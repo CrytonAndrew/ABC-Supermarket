@@ -10,6 +10,7 @@ import itemRoutes from './routes/itemRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 
 dotenv.config()
+
 connectDB()
 
 const app = express()

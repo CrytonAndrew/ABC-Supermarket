@@ -4,7 +4,8 @@ const router = express.Router()
 import {
     authUser,
     registerUser,
-    getProfile
+    getProfile,
+    getUsers
 } from '../controllers/userController.js'
 
 import {
@@ -12,7 +13,7 @@ import {
     admin,
 } from "../middleware/authMiddlware.js"
 
-router.route("/").post(registerUser)
+router.route("/").post(registerUser).get(protect, admin, getUsers)
 router.route("/login").post(authUser)
 router.route("/profile").get(protect, getProfile)
 
