@@ -1,7 +1,26 @@
-h1 {
-  color: blue;
+h2 {
+  text-align: center;
 }
 
-.item-card {
-  margin: 20px;
+.home-div {
+  padding-top: 30px;
+}
+
+.item-row {
+  display: block;
+  margin: auto;
+  padding: auto;
+}
+
+.item-col {
+  margin: 10px;
+}
+
+.login-div {
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.login-form {
+  padding: 50px 200px;
 }

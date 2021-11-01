@@ -22,16 +22,19 @@ const HomeScreen = () => {
 
     return (
         <Container>
-            {loading ? <Loader /> : error ? <Message>{error}</Message> : (<>
+            <div className="home-div">
+                {loading ? <Loader /> : error ? <Message>{error}</Message> : (<>
                 <h1>Hello World</h1>
-                <Row>
+                <Row className="item-row">
                     {products.map((product) => (
-                        <Col key={product._id} xs={12} sm={6} md={4} lg={4} xl={3}>
+                        <Col className="item-col" key={product._id} xs={12} sm={6} md={4} lg={4} xl={3}>
                             <Item product={product}/>
                         </Col>
                     ))}
                 </Row>
             </>)}
+            </div>
+            
         </Container>
     )
 }
