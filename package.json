@@ -1,0 +1,11 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "This is the ABC Market App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cryton Sibanda",
+  "license": "ISC"
+}
