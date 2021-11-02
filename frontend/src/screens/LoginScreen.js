@@ -10,7 +10,6 @@ import Loader from '../components/Loader'
 const LoginScreen = ({location, history}) => {
     const [email, setEmail]=useState('')
     const [password, setPassword] = useState('')
-    const [message, setMessage] = useState('')
 
     const dispatch = useDispatch()
 
@@ -27,21 +26,16 @@ const LoginScreen = ({location, history}) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        if (!email || !password) {
-            setMessage('Please fill in all the fields')
-        } else {
-            dispatch(loginUser(email, password))
-        }
+        dispatch(loginUser(email, password))
     }
     return (
         <div className="login-div">
         <Container>
             <h2>Sign In</h2>
             {loading && <Loader/>}
-            <Form className="login-form">
-                {message && <Message>{message}</Message>}
+            <Form className="login-form" onSubmit={submitHandler}>
                 {error && <Message>{error}</Message>}
-                <Form.Group onSubmit={submitHandler} className="mb-3" controlId="formBasicEmail">
+                <Form.Group  className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control 
                         type="email" 
