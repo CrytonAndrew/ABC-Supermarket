@@ -7,8 +7,13 @@ import {
     itemsListReducer
 } from "./reducers/itemReducers"
 
+import {
+    userLoginReducer
+} from "./reducers/userReducer"
+
 const reducer = combineReducers({
-    itemList: itemsListReducer
+    itemList: itemsListReducer,
+    userLogin: userLoginReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo')

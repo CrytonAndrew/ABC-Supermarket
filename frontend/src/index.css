@@ -24,3 +24,7 @@ h2 {
 .login-form {
   padding: 50px 200px;
 }
+
+.btn {
+  margin-left: 5px;
+}

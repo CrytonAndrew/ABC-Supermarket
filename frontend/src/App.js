@@ -10,9 +10,9 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main>
-        <Route path="/" component={HomeScreen} exact/>
+      <main> 
         <Route path="/login" component={LoginScreen}/>
+        <Route path="/" component={HomeScreen} exact/>
       </main>
     </Router>
   );

@@ -10,7 +10,8 @@ const Item = ({product}) => {
             <Card.Text>
             {product.description}
             </Card.Text>
-            <Button variant="primary">View</Button>
+            <Button variant="primary" className="btn">Update</Button>
+            <Button variant="danger">Delete</Button>
         </Card.Body>
         </Card>
     )
