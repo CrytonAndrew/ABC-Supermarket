@@ -24,13 +24,6 @@ const Header = () => {
         <Nav className="ml-auto">
         {userInfo ? (
           <>
-            <LinkContainer to='/create'>
-                  <Nav.Link className="sign-in">
-                    <p className="sign-in-nav-link">Create</p>
-                  </Nav.Link>
-            </LinkContainer>
-
-
             <NavDropdown title={userInfo.name}>
                 <LinkContainer to='/profile'>
                   <NavDropdown.Item><i class="fas fa-user"></i> Profile</NavDropdown.Item>
