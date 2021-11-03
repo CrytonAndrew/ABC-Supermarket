@@ -9,6 +9,13 @@ import {
     ITEM_CREATE_REQUEST,
     ITEM_CREATE_RESET,
     ITEM_CREATE_SUCCESS,
+    ITEM_DETAILS_REQUEST,
+    ITEM_DETAILS_SUCCESS,
+    ITEM_DETAILS_FAIL,
+    ITEM_UPDATE_REQUEST,
+    ITEM_UPDATE_SUCCESS,
+    ITEM_UPDATE_FAIL,
+    ITEM_UPDATE_RESET,
 } from "../constants/ItemConstants"
 
 export const itemsListReducer = (state = { products: [] }, action) => {
@@ -46,6 +53,34 @@ export const createItemReducer = (state = {}, action) => {
         case ITEM_CREATE_FAIL:
             return {loading: false, error: action.payload}
         case ITEM_CREATE_RESET:
+            return {}
+        default:
+            return state
+    }
+}
+
+export const getDetailsReducer = (state = { item: {} }, action ) => {
+    switch(action.type) {
+        case ITEM_DETAILS_REQUEST:
+            return {...state, loading: true}
+        case ITEM_DETAILS_SUCCESS:
+            return {loading: false, item: action.payload}
+        case ITEM_DETAILS_FAIL:
+            return {loading: false, error: action.payload}
+        default: 
+            return state
+    }
+}
+
+export const updateItemRedcuer = (state = { item: {}}, action ) => {
+    switch(action.type) {
+        case ITEM_UPDATE_REQUEST:
+            return {loading: true}
+        case ITEM_UPDATE_SUCCESS:
+            return {loading: false, item: action.payload, success: true}
+        case ITEM_UPDATE_FAIL:
+            return {loading: false, error: action.payload}
+        case ITEM_UPDATE_RESET:
             return {}
         default:
             return state

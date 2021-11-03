@@ -28,3 +28,28 @@ h2 {
 .btn {
   margin-left: 5px;
 }
+
+.item-image-screen {
+  border-radius: 20px;
+  display: block;
+  margin: auto;
+  padding: auto;
+}
+
+.item-name-screen {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+}
+
+.item-description-screen {
+  text-align: center;
+  margin: 20px;
+  font-size: 16px;
+}
+
+.item-price-screen {
+  text-align: center;
+  margin: 20px;
+  font-size: 23px;
+}

@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { Card, Button } from 'react-bootstrap'
 import {useDispatch, useSelector} from "react-redux"
+import { LinkContainer } from 'react-router-bootstrap'
 
 import { deleteItemById } from "../actions/itemActions"
 
@@ -32,7 +33,7 @@ const Item = ({product}) => {
             <Card.Text>
             {product.description}
             </Card.Text>
-            <Button variant="primary" className="btn">View</Button>
+            <LinkContainer to={`/item/${product._id}`}><Button variant="primary" className="btn">View</Button></LinkContainer>
             { userInfo.isAdmin && (<Button variant="danger" onClick={deleteHandler}>Delete</Button>)}
         </Card.Body>
         </Card>
